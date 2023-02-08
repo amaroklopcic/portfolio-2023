@@ -27,11 +27,10 @@
 }
 
 .container {
-  width: 100%;
-  height: 100%;
-  background-color: orange;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  position: absolute;
+  position: relative;
 }
 
 .auroral-northern {
@@ -41,7 +40,7 @@
   width: 200%;
   height: 200%;
   animation-name: northern;
-  animation-duration: 10s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
