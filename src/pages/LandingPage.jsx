@@ -4,21 +4,20 @@ function LandingPage() {
   return (
     <NorthernLightsBackground>
       <div className="landing-header-text-div">
-        <p className="landing-header-text">Hello!</p>
-        <p className="landing-header-text">My name is Amar Oklopcic.</p>
-        <p className="landing-header-text" style={{ fontSize: "46px" }}>
-          <button
-            className="btn-fake-link"
+        <p className="landing-header-text">
+          Amar Oklopcic
+        </p>
+        <p className="landing-header-text" style={{ fontSize: "42px" }}>
+          {"Welcome to my portfolio! "}
+          <a
+            href="#about"
             style={{
               backgroundColor: "transparent",
               borderColor: "transparent",
-              color: "#000E3C",
-              fontSize: "46px"
+              color: "#00218F",
             }}
-          >
-            {"Click here "}
-          </button>
-          to see some of my work :)
+          >Click here</a>
+          {" to see some of my work :)"}
         </p>
       </div>
     </NorthernLightsBackground>
