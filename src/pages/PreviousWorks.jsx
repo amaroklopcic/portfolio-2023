@@ -1,7 +1,7 @@
 import { Carousel, CarouselSlide } from "../components/Carousel/Carousel";
 
 function PreviousWorksSection() {
-  const previousWork = ["work1", "work2"];
+  const previousWork = ["work1", "work2", "work3", "work4"];
 
   return (
     <div
@@ -9,11 +9,14 @@ function PreviousWorksSection() {
       className="container"
       style={{ backgroundColor: "black" }}
     >
-      <Carousel style={{ width: "500px" }}>
+      <h1 style={{ color: "wheat" }}>Previous Work</h1>
+      <Carousel style={{ width: "800px", height: "500px", margin: "auto auto" }}>
         {previousWork.map((prevWork, index) => {
           return (
             <CarouselSlide key={index}>
               <p>{prevWork}</p>
+              <p>ronald</p>
+              <p>ayo</p>
             </CarouselSlide>
           )
         })}

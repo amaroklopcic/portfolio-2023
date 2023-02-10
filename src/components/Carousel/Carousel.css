@@ -1,18 +1,54 @@
+/* Used CSS from here: https://css-tricks.com/css-only-carousel/ */
 
 .carousel-container {
-    background-color: white;
+    background-color: darkgrey;
+    overflow: hidden;
 }
 
 .carousel-rotater {
     background-color: grey;
     display: flex;
-    overflow: hidden;
-    transition: transform 2s;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 90%;
+}
+
+.carousel-btn-link {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
 }
 
 .carousel-section {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 90%;
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
     position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-contents {
     width: 100%;
     height: 100%;
-    background-color: orange;
+    overflow: hidden;
 }
