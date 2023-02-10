@@ -25,7 +25,6 @@ function AuroraLights() {
   return (
     <div className="lights">
       {lights.map((light, index) => {
-        console.log(light[1], light[2])
         return (
           <div
             key={index}
