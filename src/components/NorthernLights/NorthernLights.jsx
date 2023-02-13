@@ -7,7 +7,8 @@ import Stars from "./Stars";
 function NorthernLights(props) {
   return (
     <div className="container" style={{ position: "fixed" }}>
-      {/* TODO: instead of width: 100%, add some media queries to make the mountains bigger*/}
+      {/* TODO: instead of width: 100%, add some media queries to make the mountains bigger */}
+      {/* TODO: convert background image to regular iamge tag so it can overlap stars */}
       <div style={{
         width: "100%",
         height: "100%",
