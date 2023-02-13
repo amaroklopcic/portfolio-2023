@@ -5,7 +5,7 @@ import Stars from "./Stars";
 
 function NorthernLights(props) {
     return (
-        <div className="container" style={{ backgroundColor: "#213033" }}>
+        <div className="container" style={{ position: "fixed" }}>
             {/* TODO: instead of width: 100%, add some media queries to make the mountains bigger*/}
             <div style={{
                 width: "100%",

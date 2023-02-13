@@ -2,13 +2,16 @@ import './App.css';
 import LandingPage from './pages/LandingPage';
 import AboutPage from './pages/AboutPage';
 import PreviousWorksSection from './pages/PreviousWorks';
+import NorthernLightsBackground from "./components/NorthernLights/NorthernLights";
 
 function App() {
   return (
     <div className="App">
-      <LandingPage />
-      <AboutPage />
-      <PreviousWorksSection />
+      <NorthernLightsBackground />
+        <LandingPage />
+        <AboutPage />
+        <PreviousWorksSection />
+      {/* </NorthernLightsBackground> */}
     </div>
   );
 }

@@ -7,7 +7,6 @@ function PreviousWorksSection() {
     <div
       id="previous-work"
       className="container"
-      style={{ backgroundColor: "black" }}
     >
       <h1 style={{ color: "wheat" }}>Previous Work</h1>
       <Carousel style={{ width: "800px", height: "500px", margin: "auto auto" }}>

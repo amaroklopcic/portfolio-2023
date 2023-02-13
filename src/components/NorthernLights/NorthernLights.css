@@ -26,13 +26,6 @@
   }
 }
 
-.container {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-
 .auroral-northern {
   position: absolute;
   left: -50%;

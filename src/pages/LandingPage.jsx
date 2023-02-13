@@ -1,8 +1,6 @@
-import NorthernLightsBackground from "../components/NorthernLights/NorthernLights";
-
 function LandingPage() {
   return (
-    <NorthernLightsBackground>
+    <div className="container">
       <div className="landing-header-text-div">
         {/* TODO: need to split the mountains svg image into several components,
           the moon, so we can make it glow or remove it entirely and just show aurora lights,
@@ -26,7 +24,7 @@ function LandingPage() {
           {" to see some of my work :)"}
         </p>
       </div>
-    </NorthernLightsBackground>
+    </div>
   );
 }
 
