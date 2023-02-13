@@ -8,15 +8,29 @@ function NorthernLights(props) {
   return (
     <div className="container" style={{ position: "fixed" }}>
       {/* TODO: instead of width: 100%, add some media queries to make the mountains bigger */}
-      {/* TODO: convert background image to regular iamge tag so it can overlap stars */}
-      <div style={{
-        width: "100%",
-        height: "100%",
-        background: `#213033 url(${Mountains}) no-repeat bottom center`,
-        backgroundSize: "100% auto",
-      }} />
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          background: `#213033`,
+        }}
+      >
+        <Stars />
+        <img
+          src={Mountains}
+          alt="distant mountains"
+          style={{
+            position: "absolute",
+            display: "block",
+            width: "100%",
+            height: "auto",
+            bottom: 0,
+            objectFit: "cover"
+          }}
+        />
+
+      </div>
       <div className="auroral-northern" />
-      <Stars />
       <AuroraLights />
       <DarkLayer />
     </div>
