@@ -8,7 +8,7 @@ function PreviousWorksSection() {
       id="previous-work"
       className="container"
     >
-      <h1 style={{ color: "wheat" }}>Previous Work</h1>
+      <h1 style={{ color: "#C1EBF1", fontSize: "32px" }}>Previous Work</h1>
       <Carousel style={{ width: "800px", height: "500px", margin: "auto auto" }}>
         {previousWork.map((prevWork, index) => {
           return (
