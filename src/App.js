@@ -8,10 +8,9 @@ function App() {
   return (
     <div className="App">
       <NorthernLightsBackground />
-        <LandingPage />
-        <AboutPage />
-        <PreviousWorksSection />
-      {/* </NorthernLightsBackground> */}
+      <LandingPage />
+      <AboutPage />
+      <PreviousWorksSection />
     </div>
   );
 }
