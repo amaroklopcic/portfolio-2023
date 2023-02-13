@@ -4,10 +4,10 @@ function AboutSection() {
   return (
     <div
       id="about"
-      className="container page-section flex-center"
+      className="container"
       style={{ backgroundColor: "white", flexDirection: "column" }}
     >
-      <div style={{ width: "50vw", textAlign: "center" }}>
+      <div style={{ margin: "auto auto", width: "50vw", textAlign: "center" }}>
         <h2 className="page-section-header">About</h2>
         <div style={{ display: "flex" }}>
           <p style={{ fontSize: "1.1rem", marginTop: "1rem" }}>
