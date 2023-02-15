@@ -8,7 +8,7 @@ function AboutSection() {
       style={{ flexDirection: "column" }}
     >
       <div style={{ margin: "auto auto", width: "50vw", textAlign: "center", color: "#F7FFF7" }}>
-        <h1 style={{ color: "#C1EBF1", fontSize: "32px" }}>About</h1>
+        <h1 style={{ color: "#C1EBF1", fontSize: "32px", marginBottom: "3rem" }}>About</h1>
         <div style={{ display: "flex" }}>
           <p style={{ fontSize: "1.1rem", marginTop: "1rem" }}>
             Hi, I'm Amar :)
