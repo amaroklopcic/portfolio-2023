@@ -4,10 +4,10 @@ function DarkLayer() {
   const stageCanvasRef = useRef(null);
 
   const [totalHeight, setTotalHeight] = useState(0);
-  const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState(window.scrollY);
 
   useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
+    const onScroll = () => setOffset(window.scrollY);
     window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
