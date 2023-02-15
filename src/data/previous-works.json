@@ -1,14 +1,16 @@
 [
     {
+      "id": "UMA",
       "name": "User Management App",
       "preview-link": "//google",
       "source-link": "//github.com",
       "image-link": "",
       "description": "A private Firebase/React app made to manage client access to the dashboards for the company I was working with at the time; architected and developed from the ground up by me.",
       "date-developed": "May, 2020",
-      "tech-used": ["TypeScript", "React.js", "Firebase", "HTML", "CSS", "JS"]
+      "tech-used": ["Shopify API", "TypeScript", "React.js", "Firebase", "Google BigQuery", "HTML", "CSS", "JS"]
     },
     {
+      "id": "Weather App",
       "name": "Weather App",
       "preview-link": "google.com",
       "source-link": "github.com",
@@ -18,6 +20,7 @@
       "tech-used": ["AWS", "Flask"]
     },
     {
+      "id": "mCompass",
       "name": "mCompass Addon | Garry's Mod",
       "preview-link": "https://steamcommunity.com/sharedfiles/filedetails/?id=1452363997",
       "source-link": "https://github.com/amaroklopcic/mCompass",
@@ -27,6 +30,7 @@
       "tech-used": ["Lua"]
     },
     {
+      "id": "TOW",
       "name": "Tow Launcher Addon | Garry's Mod",
       "preview-link": "https://steamcommunity.com/sharedfiles/filedetails/?id=934097023",
       "source-link": "https://github.com/amaroklopcic/tow-launcher",
