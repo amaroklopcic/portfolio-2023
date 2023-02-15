@@ -18,6 +18,8 @@ function Carousel(props) {
         )
       })}
 
+      <hr style={{ width: "25%", color: "#3C7982", border: "1px dotted #3C7982" }} />
+
       {/* TODO: display clickable dots for each element in the carousel with page nums too */}
       <div className="carousel-rotater">
         {props.children.map((child, index) => {

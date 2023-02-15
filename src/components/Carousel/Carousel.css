@@ -1,12 +1,11 @@
 /* Used CSS from here: https://css-tricks.com/css-only-carousel/ */
 
 .carousel-container {
-    background-color: darkgrey;
     overflow: hidden;
+    color: #F7FFF7;
 }
 
 .carousel-rotater {
-    background-color: grey;
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -19,13 +18,17 @@
     display: inline-flex;
     width: 1.5rem;
     height: 1.5rem;
-    background: white;
+    background: #F7FFF7;
     text-decoration: none;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    margin: 0 0 0.5rem 0;
+    margin: 0.5rem 0.25rem;
     position: relative;
+    color: black;
+}
+.carousel-btn-link:hover {
+    background: #50A1AB;
 }
 
 .carousel-section {
@@ -36,7 +39,6 @@
     margin-left: 50px;
     margin-right: 50px;
     border-radius: 10px;
-    background: #eee;
     transform-origin: center center;
     transform: scale(1);
     transition: transform 0.5s;
