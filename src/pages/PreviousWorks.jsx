@@ -8,7 +8,10 @@ function PreviousWorksSection() {
       className="container"
     >
       <h1 style={{ color: "#C1EBF1", fontSize: "32px", marginBottom: "3rem" }}>Previous Work</h1>
-      <Carousel style={{ width: "800px", height: "500px", margin: "auto auto" }}>
+      <Carousel
+        style={{ width: "800px", height: "500px", margin: "auto auto" }}
+        pageIds={previousWorksData.map((prevWork) => prevWork.id)}
+      >
         {previousWorksData.map((data, index) => {
           return (
             <CarouselSlide key={index}>

@@ -16,19 +16,19 @@
 
 .carousel-btn-link {
     display: inline-flex;
-    width: 1.5rem;
+    padding: 0px 6px;
     height: 1.5rem;
     background: #F7FFF7;
     text-decoration: none;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    margin: 0.5rem 0.25rem;
+    border-radius: 6px;
+    margin: 0.5rem 0.5rem;
     position: relative;
-    color: black;
+    color: #213033;
 }
 .carousel-btn-link:hover {
-    background: #50A1AB;
+    background: #7EBDC4;
 }
 
 .carousel-section {

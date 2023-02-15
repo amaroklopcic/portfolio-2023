@@ -6,14 +6,14 @@ function Carousel(props) {
   return (
     <div className="carousel-container" style={props.style}>
 
-      {props.children.map((prevWork, index) => {
+      {props.pageIds.map((id, index) => {
         return (
           <a
             key={index}
             className="carousel-btn-link"
-            href={`#slide-${index + 1}`}
+            href={`#slide-${index}`}
           >
-            {index + 1}
+            {id}
           </a>
         )
       })}
@@ -23,7 +23,7 @@ function Carousel(props) {
       {/* TODO: display clickable dots for each element in the carousel with page nums too */}
       <div className="carousel-rotater">
         {props.children.map((child, index) => {
-          return cloneElement(child, { id: `slide-${index + 1}` });
+          return cloneElement(child, { id: `slide-${index}` });
         })}
       </div>
     </div>
