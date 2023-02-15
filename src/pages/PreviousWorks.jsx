@@ -19,7 +19,8 @@ function PreviousWorksSection() {
                     src={data["image-link"] || "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"}
                     alt="placeholder"
                     style={{
-                      width: "100%"
+                      width: "100%",
+                      borderRadius: "6px"
                     }}
                   />
                 </div>
@@ -29,18 +30,20 @@ function PreviousWorksSection() {
                 </div>
               </div>
               <div style={{ textAlign: "left", marginLeft: "1rem" }}>
-                <h3>Tech Used</h3>
-                {data["tech-used"].map((techName, index) => {
-                  return <span
-                    key={index}
-                    style={{
-                      background: "#68B684",
-                      padding: "0.25rem 0.75rem",
-                      borderRadius: "6px",
-                      margin: "4px"
-                    }}
-                  >{techName}</span>
-                })}
+                <h3 style={{ marginBottom: "0.5rem" }}>Tech Used</h3>
+                <div style={{ display: "flex", "flexWrap": "wrap" }}>
+                  {data["tech-used"].map((techName, index) => {
+                    return <span
+                      key={index}
+                      style={{
+                        background: "#68B684",
+                        padding: "0.25rem 0.75rem",
+                        borderRadius: "6px",
+                        margin: "4px"
+                      }}
+                    >{techName}</span>
+                  })}
+                </div>
               </div>
             </CarouselSlide>
           )
