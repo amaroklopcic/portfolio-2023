@@ -21,7 +21,7 @@ function LandingPage() {
               color: "#50A1AB",
             }}
           >Click here</a>
-          {" to see some of my work :)"}
+          {" to learn more about me :)"}
         </p>
       </div>
     </div>
