@@ -1,4 +1,4 @@
-import SackboyPNG from "./SackboySony.png";
+import SackboyPNG from "./sackboy.png";
 
 function AboutSection() {
   return (

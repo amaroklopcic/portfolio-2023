@@ -1,4 +1,6 @@
-import { Envelope, GitHub, LinkedIn } from "../components/Icons";
+import Envelope from "./envelope.svg";
+import GitHub from "./github.svg";
+import LinkedIn from "./linkedin.svg";
 
 const iconStyle = {
   width: "48px",
@@ -29,7 +31,7 @@ function ContactInfo() {
       >
         <a className="contact-links" href="https://github.com/amaroklopcic">
           <div style={iconStyle}>
-            <GitHub />
+            <img src={GitHub} alt="github logo" />
           </div>
         </a>
         <a
@@ -37,12 +39,12 @@ function ContactInfo() {
           href="https://www.linkedin.com/in/amaroklopcic/"
         >
           <div style={iconStyle}>
-            <LinkedIn />
+            <img src={LinkedIn} alt="linkedin logo" />
           </div>
         </a>
         <a className="contact-links" href="mailto:amaroklopcic@outlook.com">
           <div style={iconStyle}>
-            <Envelope />
+            <img src={Envelope} alt="envelope icon" />
           </div>
         </a>
       </div>

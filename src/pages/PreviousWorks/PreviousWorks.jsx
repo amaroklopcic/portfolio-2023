@@ -1,8 +1,12 @@
-import WorkTimeline, { TimelineCategory, TimelineCategoryItem } from "../components/WorkTimeline/WorkTimeline";
-import previousWorksTimelineData from "../data/previous-works-timeline.json";
+import WorkTimeline, { TimelineCategory, TimelineCategoryItem } from "../../components/WorkTimeline/WorkTimeline";
+import previousWorksTimelineData from "../../data/previous-works-timeline.json";
+import brightfieldLogo from "./brightfield.jpeg";
+import gmodLogo from "./gmod.png";
 
 function PreviousWorksSection() {
-  // TODO: change company icons pulled from external sources to be pulled in from our own backend
+  previousWorksTimelineData[0]["icon"] = brightfieldLogo;
+  previousWorksTimelineData[1]["icon"] = gmodLogo;
+
   return (
     <div
       id="previous-work"
