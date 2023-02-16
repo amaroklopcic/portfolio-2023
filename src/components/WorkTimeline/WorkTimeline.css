@@ -1,0 +1,36 @@
+.timeline-container {
+    color: white;
+    text-align: left;
+}
+
+.timeline-vertical-line {
+    border-left: 2px solid lightgrey;
+    margin-left: 3px;
+    margin-top: 10px;
+    height: 90%;
+}
+
+.timeline-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 6px;
+}
+
+.timeline-no-space {
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-title-text {
+    font-size: 16px;
+}
+
+.timeline-text-grey {
+    color: lightgrey;
+}
+
+.timeline-category-item-container {
+    margin-left: 0.5rem;
+}
