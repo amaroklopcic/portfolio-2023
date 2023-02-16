@@ -2,15 +2,16 @@ import { Children, cloneElement } from "react";
 import "./WorkTimeline.css";
 
 function WorkTimeline(props) {
-  // console.log(props.children);
-
   return (
     <div className="timeline-container">
       {Children.map(props.children, (child, index) => {
         return (
           <div>
             {cloneElement(child)}
-            {index + 1 !== Children.count(props.children) ? <hr /> : <></>}
+            {index + 1 !== Children.count(props.children)
+              ? <hr style={{ margin: "1.5rem 0" }} />
+              : <></>
+            }
           </div>
         )
       })}
@@ -19,12 +20,6 @@ function WorkTimeline(props) {
 }
 
 function TimelineCategory(props) {
-  // console.log(props.name);
-  // console.log(props.timeWorked);
-  // console.log(props.icon);
-  // console.log(props.iconAlt);
-  // console.log(props.link);
-
   return (
     <div>
       {/* category header section (icon + category/company name) */}
@@ -66,12 +61,6 @@ function TimelineCategory(props) {
 }
 
 function TimelineCategoryItem(props) {
-  // console.log(props.title);
-  // console.log(props.positionType);
-  // console.log(props.timeWorked);
-  // console.log(props.location);
-  // console.log(props.description);
-
   return (
     <div className="timeline-category-item-container">
       <b className="timeline-no-space">{props.title}</b>
