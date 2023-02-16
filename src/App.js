@@ -3,6 +3,7 @@ import LandingPage from './pages/LandingPage';
 import AboutPage from './pages/AboutPage';
 import PreviousWorksSection from './pages/PreviousWorks';
 import NorthernLightsBackground from "./components/NorthernLights/NorthernLights";
+import ContactInfo from './pages/Contact';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <LandingPage />
       <AboutPage />
       <PreviousWorksSection />
+      <ContactInfo />
     </div>
   );
 }
