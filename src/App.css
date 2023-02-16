@@ -29,8 +29,18 @@ html {
   position: relative;
 }
 
+.relative-position {
+  overflow: hidden;
+  position: relative;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+.link {
+  color: "#C1EBF1";
+  text-decoration: none;
 }

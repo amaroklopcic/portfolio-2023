@@ -4,11 +4,15 @@ function AboutSection() {
   return (
     <div
       id="about"
-      className="container"
-      style={{ flexDirection: "column" }}
+      className="relative-position"
     >
       <div style={{ margin: "0 auto", width: "50vw", color: "#F7FFF7" }}>
-        <h1 style={{ color: "#C1EBF1", fontSize: "32px", marginBottom: "3rem" }}>About</h1>
+        <a href="#about" className="link">
+          <h1 style={{ color: "#C1EBF1", fontSize: "32px", marginBottom: "3rem" }}>
+            About
+          </h1>
+        </a>
+
         <div style={{ display: "flex" }}>
           <p style={{ fontSize: "1.1rem", marginTop: "1rem" }}>
             Hi, I'm Amar :)
@@ -52,16 +56,6 @@ function AboutSection() {
             />
           </div>
         </div>
-        <p className="landing-header-text" style={{ fontSize: "32px" }}>
-          <a
-            href="#previous-work"
-            style={{
-              backgroundColor: "transparent",
-              borderColor: "transparent",
-              color: "#7EBDC4",
-            }}
-          >See my previous work.</a>
-        </p>
       </div>
     </div>
   );
