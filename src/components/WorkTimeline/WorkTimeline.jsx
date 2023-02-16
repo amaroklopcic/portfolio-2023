@@ -71,7 +71,7 @@ function TimelineCategoryItem(props) {
       <p className="timeline-no-space">
         <b style={{ fontSize: "14px" }}>Skills: </b>
         {(props.skills || []).map((skill, index) => {
-          return <span>{skill}{index + 1 !== props.skills.length ? " · " : <></>}</span>
+          return <span key={index}>{skill}{index + 1 !== props.skills.length ? " · " : <></>}</span>
         })}
       </p>
     </div>
