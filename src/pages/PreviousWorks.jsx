@@ -9,7 +9,7 @@ function PreviousWorksSection() {
       className="relative-position"
     >
       <a href="#previous-work" className="link">
-        <h1 style={{ color: "#C1EBF1", fontSize: "32px", marginBottom: "3rem", marginTop: "6rem" }}>
+        <h1 style={{ color: "#C1EBF1", fontSize: "32px", marginBottom: "3rem", marginTop: "9rem" }}>
           Previous Work
         </h1>
       </a>
