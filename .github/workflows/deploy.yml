@@ -8,18 +8,14 @@ on:
   #   types: [created]
 
 jobs:
-  build:
+  upload-build:
     runs-on: ubuntu-latest
     steps:
+      - name: Build
       - uses: actions/checkout@master
-        with:
-          script: npm run build-backend
+      - run: npm run build-backend
 
-  upload:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
+      - name: Upload build to DigitalOcean Spaces
       - uses: BetaHuhn/do-spaces-action@v2
         with:
           access_key: ${{ secrets.DO_ACCESS_KEY}}
