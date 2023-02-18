@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build
-      - uses: actions/checkout@master
-      - run: npm run build-backend
+        uses: actions/checkout@master
+        run: npm run build-backend
 
       - name: Upload build to DigitalOcean Spaces
-      - uses: BetaHuhn/do-spaces-action@v2
+        uses: BetaHuhn/do-spaces-action@v2
         with:
           access_key: ${{ secrets.DO_ACCESS_KEY}}
           secret_key: ${{ secrets.DO_SECRET_KEY }}
