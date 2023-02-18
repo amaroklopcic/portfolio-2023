@@ -11,8 +11,8 @@ jobs:
   upload-build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
       - name: Build
-        uses: actions/checkout@master
         run: npm run build-backend
 
       - name: Upload build to DigitalOcean Spaces
