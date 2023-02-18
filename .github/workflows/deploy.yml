@@ -1,18 +1,53 @@
 name: Build & Deploy
+
+# TODO: do on new releases instead of pushes to main branch
 on:
   push:
     branches: [main]
+  # release:
+  #   types: [created]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy application
-        uses: appleboy/ssh-action@v0.1.7
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          key: ${{ secrets.SSH_KEY }}
-          username: ${{ secrets.SSH_USERNAME }}
+      - uses: actions/checkout@master
+      with:
+        script: npm run build-backend
 
-          # TODO: add commands to stop/start webserver and pull in latest code
-          script: whoami
+  upload:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: BetaHuhn/do-spaces-action@v2
+        with:
+          access_key: ${{ secrets.DO_ACCESS_KEY}}
+          secret_key: ${{ secrets.DO_SECRET_KEY }}
+          space_name: ${{ secrets.DO_SPACE_NAME }}
+          space_region: ${{ secrets.DO_SPACE_REGION }}
+          source: build
+          out_dir: amaroklopcic.com-build
+
+  # deploy:
+  #   needs: upload
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Deploy application
+  #       uses: appleboy/ssh-action@v0.1.7
+  #       with:
+  #         host: ${{ secrets.SSH_HOST }}
+  #         key: ${{ secrets.SSH_KEY }}
+  #         username: ${{ secrets.SSH_USERNAME }}
+
+  #         # TODO: add commands to stop/start webserver and pull in latest code
+  #         # TODO: droplet doesnt have enough memory to build the app, so instead we'll have to upload the built version somewhere and then pull it down in the droplet first
+  #         # TODO: add status checks to the bottom of the script to make sure site is back up
+  #         script: |
+  #           cd /apps/webapp/
+  #           pm2 stop index
+  #           git pull
+  #           npm install
+  #           npm run build-backend
+  #           cd build
+  #           pm2 start index.js
