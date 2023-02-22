@@ -5,7 +5,7 @@ function LandingPage() {
         <p className="landing-header-text" style={{ color: "#C1EBF1" }}>
           Amar Oklopcic
         </p>
-        <p className="landing-header-text" style={{ fontSize: "24px" }}>
+        <p className="landing-header-text-sm">
           {"Welcome to my portfolio! "}
           <a
             href="#about"

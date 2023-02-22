@@ -6,14 +6,14 @@ function AboutSection() {
       id="about"
       className="relative-position"
     >
-      <div style={{ margin: "0 auto", width: "50vw", color: "#F7FFF7" }}>
+      <div className="about-section">
         <a href="#about" className="link">
           <h1 style={{ color: "#C1EBF1", fontSize: "32px", marginBottom: "3rem" }}>
             About
           </h1>
         </a>
 
-        <div style={{ display: "flex" }}>
+        <div className="about-section-flex">
           <p style={{ fontSize: "1.1rem", marginTop: "1rem" }}>
             Hi, I'm Amar :)
             <br />

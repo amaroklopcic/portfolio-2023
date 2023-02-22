@@ -19,9 +19,7 @@ function PreviousWorksSection() {
       </a>
 
       <div>
-        <div
-          style={{ width: "500px", margin: "auto auto" }}
-        >
+        <div className="previous-work-section">
           <WorkTimeline>
             {previousWorksTimelineData.map((previousWork, index) => {
               return (
