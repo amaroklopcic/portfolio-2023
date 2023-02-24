@@ -1,22 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 
 function Stars() {
-  // TODO: number of stars should be dynamic based on size of container,
-  // since it'll either look really empty or really crowded depending
-  // on screen size
-  // maybe shoot for something like 1-2 stars per 100x100 px area
-  const numberOfStars = 300;
+  // number of stars per 100x100 pixel area
+  const starsDpi = 3;
 
   const [stars, setStars] = useState([]);
 
   const stageCanvasRef = useRef(null);
 
   useEffect(() => {
-    let width, height;
+    let width, height, numberOfStars;
 
     if (stageCanvasRef.current) {
       height = stageCanvasRef.current.offsetHeight;
       width = stageCanvasRef.current.offsetWidth;
+      numberOfStars = Math.ceil(((width * height) / 10000) * starsDpi);
+      console.debug(`generating ${numberOfStars} stars...`);
     }
 
     // white, Sky blue, Light blue, Jasmine, Mint cream
