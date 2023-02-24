@@ -23,13 +23,14 @@ function Stars() {
 
     const starPositions = [];
     for (let i = 0; i < numberOfStars; i++) {
-      const x = Math.ceil(Math.random() * width);
-      const y = Math.ceil(Math.random() * height);
+      const x = ((Math.random() * width) / width) * 100;
+      const y = ((Math.random() * height) / height) * 100;
       const opacity = Math.min(Math.random() + 0.1, 0.6);
       const size = Math.round(6 * Math.random());
+      const viewportSize = Math.min(Math.max((size / 6), 0.2), 1) * 2;
       const index = Math.min(size, 4);
       const color = starColors[index];
-      starPositions.push([x, y, size, opacity, color]);
+      starPositions.push([x, y, viewportSize, opacity, color]);
     }
 
     setStars(starPositions);
@@ -48,10 +49,10 @@ function Stars() {
           key={index}
           style={{
             position: "absolute",
-            width: `${starPos[2]}px`,
-            height: `${starPos[2]}px`,
-            left: starPos[0],
-            top: starPos[1],
+            width: `${(starPos[2] / 8) + 0.2}vw`,
+            height: `${(starPos[2] / 8) + 0.2}vw`,
+            left: `${starPos[0]}%`,
+            top: `${starPos[1]}%`,
             opacity: starPos[3],
             backgroundColor: starPos[4],
             borderRadius: "50%",
