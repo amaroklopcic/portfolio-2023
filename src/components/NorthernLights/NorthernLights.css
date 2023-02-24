@@ -47,7 +47,7 @@
   top: 0;
   transform: translate(-20%, -55%) rotate(30deg);
   display: flex;
-  filter: blur(75px);
+  filter: blur(6vmax);
 }
 
 .light {

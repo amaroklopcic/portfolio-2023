@@ -1,7 +1,7 @@
 import "./NorthernLights.css";
 
 function AuroraLights() {
-  const numberOfLights = 50;
+  const numberOfLights = 20;
 
   const colorVariations = [
     "#a1d9b4",
