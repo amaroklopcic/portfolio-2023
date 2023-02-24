@@ -7,7 +7,6 @@ import Stars from "./Stars";
 function NorthernLights(props) {
   return (
     <div className="container" style={{ position: "fixed" }}>
-      {/* TODO: instead of width: 100%, add some media queries to make the mountains bigger */}
       <div
         style={{
           width: "100%",
@@ -16,6 +15,11 @@ function NorthernLights(props) {
         }}
       >
         <Stars />
+        {/* TODO: mountains need to be redone in a way that makes them tileable.
+            they currently take up the entire screen with ultrawide monitors.
+            the SVG cant stretch and we cant repeat it, since the moon is included
+            in the svg and we dont want multiple moons.
+        */}
         <img
           src={Mountains}
           alt="distant mountains"
