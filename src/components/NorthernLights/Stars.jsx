@@ -27,9 +27,9 @@ function Stars() {
       const y = ((Math.random() * height) / height) * 100;
       const opacity = Math.min(Math.random() + 0.1, 0.6);
       const size = Math.round(6 * Math.random());
-      // using aspect ratio of screen size in size calculation for more consistent star
-      // sizes across different screen sizes
-      const viewportSize = Math.min(Math.max((size / 6), 0.2), 1) / (width / height);
+      // using screen width in size calculation for more consistent star sizes across
+      // different screen sizes
+      const viewportSize = ((Math.min(Math.max((size / 6), 0.2), 1) * 8) / width) * 100;
       const index = Math.min(size, 4);
       const color = starColors[index];
       starPositions.push([x, y, viewportSize, opacity, color]);
