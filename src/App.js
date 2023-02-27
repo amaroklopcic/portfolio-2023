@@ -8,11 +8,12 @@ import ContactInfo from './pages/Contact/Contact';
 function App() {
   return (
     <div className="App">
-      <NorthernLightsBackground />
-      <LandingPage />
-      <AboutPage />
-      <PreviousWorksSection />
-      <ContactInfo />
+      <NorthernLightsBackground>
+        <LandingPage />
+        <AboutPage />
+        <PreviousWorksSection />
+        <ContactInfo />
+      </NorthernLightsBackground>
     </div>
   );
 }
