@@ -1,26 +1,30 @@
+import { useMemo } from "react";
 import "./NorthernLights.css";
 
-function AuroraLights() {
-  const numberOfLights = 20;
-
-  const colorVariations = [
-    "#a1d9b4",
-    "#32988a",
-    "#000e3c"
-  ];
-
-  const lights = [];
-  for (let i = 0; i < numberOfLights; i++) {
-    const randomColor = colorVariations[
-      Math.floor(Math.random() * colorVariations.length)
+function AuroraLights({ numberOfLights = 20 }) {
+  const lights = useMemo(() => {
+    const colorVariations = [
+      "#a1d9b4",
+      "#32988a",
+      "#000e3c"
     ];
-    const x = i * Math.random();
-    const y = i * Math.random();
-    const duration = 5 + Math.floor(10 * Math.random());
-    const delay = 4 + Math.floor(10 * Math.random());
-    const scale = 0.1 * Math.random();
-    lights.push([randomColor, duration, delay, x, y, scale]);
-  }
+
+    const lights = [];
+
+    for (let i = 0; i < numberOfLights; i++) {
+      const randomColor = colorVariations[
+        Math.floor(Math.random() * colorVariations.length)
+      ];
+      const x = i * Math.random();
+      const y = i * Math.random();
+      const duration = 5 + Math.floor(10 * Math.random());
+      const delay = 4 + Math.floor(10 * Math.random());
+      const scale = 0.1 * Math.random();
+      lights.push([randomColor, duration, delay, x, y, scale]);
+    }
+
+    return lights;
+  }, [numberOfLights])
 
   return (
     <div className="lights">
