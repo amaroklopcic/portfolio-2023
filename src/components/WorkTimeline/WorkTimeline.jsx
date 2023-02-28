@@ -31,7 +31,9 @@ function TimelineCategory(props) {
           style={{ display: "block", width: "48px", height: "48px", border: "none" }}
         />
         <div className="timeline-category-item-container">
-          <b className="timeline-no-space timeline-title-text">{props.name}</b>
+          <a href={props.categoryLink} className="timeline-text-blue">
+            <b className="timeline-no-space timeline-title-text">{props.name}</b>
+          </a>
           <p className="timeline-no-space">{props.timeWorked}</p>
         </div>
       </div>
@@ -63,7 +65,9 @@ function TimelineCategory(props) {
 function TimelineCategoryItem(props) {
   return (
     <div className="timeline-category-item-container">
-      <b className="timeline-no-space">{props.title}</b>
+      <a href={props.categoryItemLink} className="timeline-text-lightblue">
+        <b className="timeline-no-space">{props.title}</b>
+      </a>
       <p className="timeline-no-space">{props.positionType}</p>
       <p className="timeline-no-space timeline-text-grey">{props.timeWorked}</p>
       <p className="timeline-no-space timeline-text-grey">{props.location}</p>

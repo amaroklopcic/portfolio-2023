@@ -26,6 +26,7 @@ function PreviousWorksSection() {
                 <TimelineCategory
                   key={index}
                   name={previousWork.companyName}
+                  categoryLink={previousWork.companyLink}
                   timeWorked={previousWork.timeAtCompany}
                   icon={previousWork.icon}
                   iconAlt={previousWork.iconAlt}
@@ -35,6 +36,7 @@ function PreviousWorksSection() {
                       <TimelineCategoryItem
                         key={index}
                         title={previousPosition.title}
+                        categoryItemLink={previousPosition.positionLink}
                         positionType={previousPosition.positionType}
                         timeWorked={previousPosition.positionTimeframe}
                         location={previousPosition.location}

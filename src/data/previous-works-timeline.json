@@ -1,70 +1,85 @@
 [
-    {
-        "companyName": "Brightfield Group",
-        "timeAtCompany": "3 yrs 4 mos",
-        "icon": "https://media.licdn.com/dms/image/C560BAQEtqiO3eHSkbw/company-logo_100_100/0/1575846570516?e=1684368000&v=beta&t=NcEdKHJiqz5CtwvTqyBwmiEGyyTYglwJ4uNdJ4z2q70",
-        "iconAlt": "Brightfield Group logo",
-        "companyWebsiteLink": "https://www.brightfieldgroup.com/",
-        "positions": [
-            {
-                "title": "Senior Full Stack Engineer",
-                "positionType": "Full-time",
-                "positionTimeframe": "Dec 2021 - Dec 2022 · 1 yr 1 mo",
-                "location": "Greater Chicago Area",
-                "description": "",
-                "skills": [
-                    "HTML", "Cascading Style Sheets (CSS)", "JavaScript", "REST APIs", "TypeScript", "Git", "Python", "Google Cloud Platform (GCP), Microsoft Azure"
-                ]
-            },
-            {
-                "title": "Full Stack Engineer",
-                "positionType": "Full-time",
-                "positionTimeframe": "Feb 2020 - Dec 2021 · 1 yr 11 mo",
-                "location": "Greater Chicago Area",
-                "description": "",
-                "skills": [
-                    "HTML", "Cascading Style Sheets (CSS)", "JavaScript", "REST APIs", "TypeScript", "Git", "Python", "Google Cloud Platform (GCP)"
-                ]
-            },
-            {
-                "title": "Data Visualization Engineer",
-                "positionType": "Contract",
-                "positionTimeframe": "Sep 2019 - Feb 2020 · 6 mo",
-                "location": "Chicago, Illinois, United States",
-                "description": "",
-                "skills": [
-                    "Git", "Microsoft Power BI"
-                ]
-            }
+  {
+    "companyName": "Brightfield Group",
+    "companyLink": "https://www.brightfieldgroup.com/",
+    "timeAtCompany": "3 yrs 4 mos",
+    "icon": "https://media.licdn.com/dms/image/C560BAQEtqiO3eHSkbw/company-logo_100_100/0/1575846570516?e=1684368000&v=beta&t=NcEdKHJiqz5CtwvTqyBwmiEGyyTYglwJ4uNdJ4z2q70",
+    "iconAlt": "Brightfield Group logo",
+    "companyWebsiteLink": "https://www.brightfieldgroup.com/",
+    "positions": [
+      {
+        "title": "Senior Full Stack Engineer",
+        "positionType": "Full-time",
+        "positionTimeframe": "Dec 2021 - Dec 2022 · 1 yr 1 mo",
+        "positionLink": null,
+        "location": "Greater Chicago Area",
+        "description": null,
+        "skills": [
+          "HTML",
+          "Cascading Style Sheets (CSS)",
+          "JavaScript",
+          "REST APIs",
+          "TypeScript",
+          "Git",
+          "Python",
+          "Google Cloud Platform (GCP), Microsoft Azure"
         ]
-    },
-    {
-        "companyName": "Garry's Mod Hobby Work",
-        "timeAtCompany": "~ 2 yrs",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Garry%27s_Mod_logo.svg/2048px-Garry%27s_Mod_logo.svg.png",
-        "iconAlt": "Garry's Mod icon",
-        "companyWebsiteLink": "https://gmod.facepunch.com/",
-        "positions": [
-            {
-                "title": "mCompass",
-                "positionType": "Project",
-                "positionTimeframe": "Released Jul 2018",
-                "location": "Greater Chicago Area",
-                "description": "",
-                "skills": [
-                    "Lua"
-                ]
-            },
-            {
-                "title": "TOW Launcher",
-                "positionType": "Project",
-                "positionTimeframe": "Released May 2017",
-                "location": "Greater Chicago Area",
-                "description": "",
-                "skills": [
-                    "Lua"
-                ]
-            }
+      },
+      {
+        "title": "Full Stack Engineer",
+        "positionType": "Full-time",
+        "positionTimeframe": "Feb 2020 - Dec 2021 · 1 yr 11 mo",
+        "positionLink": null,
+        "location": "Greater Chicago Area",
+        "description": null,
+        "skills": [
+          "HTML",
+          "Cascading Style Sheets (CSS)",
+          "JavaScript",
+          "REST APIs",
+          "TypeScript",
+          "Git",
+          "Python",
+          "Google Cloud Platform (GCP)"
         ]
-    }
+      },
+      {
+        "title": "Data Visualization Engineer",
+        "positionType": "Contract",
+        "positionTimeframe": "Sep 2019 - Feb 2020 · 6 mo",
+        "positionLink": null,
+        "location": "Chicago, Illinois, United States",
+        "description": null,
+        "skills": ["Git", "Microsoft Power BI"]
+      }
+    ]
+  },
+  {
+    "companyName": "Garry's Mod Hobby Work",
+    "companyLink": "https://steamcommunity.com/app/4000/workshop/",
+    "timeAtCompany": "~ 2 yrs",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Garry%27s_Mod_logo.svg/2048px-Garry%27s_Mod_logo.svg.png",
+    "iconAlt": "Garry's Mod icon",
+    "companyWebsiteLink": "https://gmod.facepunch.com/",
+    "positions": [
+      {
+        "title": "mCompass",
+        "positionType": "Project",
+        "positionTimeframe": "Released Jul 2018",
+        "positionLink": "https://github.com/amaroklopcic/mCompass",
+        "location": "Greater Chicago Area",
+        "description": null,
+        "skills": ["Lua"]
+      },
+      {
+        "title": "TOW Launcher",
+        "positionType": "Project",
+        "positionTimeframe": "Released May 2017",
+        "positionLink": "https://github.com/amaroklopcic/tow-launcher",
+        "location": "Greater Chicago Area",
+        "description": null,
+        "skills": ["Lua"]
+      }
+    ]
+  }
 ]
