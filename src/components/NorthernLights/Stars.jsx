@@ -1,22 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 
 function Stars() {
-  // TODO: number of stars should be dynamic based on size of container,
-  // since it'll either look really empty or really crowded depending
-  // on screen size
-  // maybe shoot for something like 1-2 stars per 100x100 px area
-  const numberOfStars = 300;
+  // number of stars per 100x100 pixel area
+  const starsDpi = 3;
 
   const [stars, setStars] = useState([]);
 
   const stageCanvasRef = useRef(null);
 
   useEffect(() => {
-    let width, height;
+    let width, height, numberOfStars;
 
     if (stageCanvasRef.current) {
       height = stageCanvasRef.current.offsetHeight;
       width = stageCanvasRef.current.offsetWidth;
+      numberOfStars = Math.ceil(((width * height) / 10000) * starsDpi);
+      console.debug(`generating ${numberOfStars} stars...`);
     }
 
     // white, Sky blue, Light blue, Jasmine, Mint cream
@@ -24,13 +23,16 @@ function Stars() {
 
     const starPositions = [];
     for (let i = 0; i < numberOfStars; i++) {
-      const x = Math.ceil(Math.random() * width);
-      const y = Math.ceil(Math.random() * height);
+      const x = ((Math.random() * width) / width) * 100;
+      const y = ((Math.random() * height) / height) * 100;
       const opacity = Math.min(Math.random() + 0.1, 0.6);
       const size = Math.round(6 * Math.random());
+      // using screen width in size calculation for more consistent star sizes across
+      // different screen sizes
+      const viewportSize = ((Math.min(Math.max(size / 6, 0.2), 1) * 8) / width) * 100;
       const index = Math.min(size, 4);
       const color = starColors[index];
-      starPositions.push([x, y, size, opacity, color]);
+      starPositions.push([x, y, viewportSize, opacity, color]);
     }
 
     setStars(starPositions);
@@ -41,26 +43,27 @@ function Stars() {
       ref={stageCanvasRef}
       style={{
         width: "100%",
-        height: "100%",
-      }}
-    >
+        height: "100%"
+      }}>
       {stars.map((starPos, index) => {
-        return <span
-          key={index}
-          style={{
-            position: "absolute",
-            width: `${starPos[2]}px`,
-            height: `${starPos[2]}px`,
-            left: starPos[0],
-            top: starPos[1],
-            opacity: starPos[3],
-            backgroundColor: starPos[4],
-            borderRadius: "50%",
-          }}
-        />
+        return (
+          <span
+            key={index}
+            style={{
+              position: "absolute",
+              width: `${starPos[2]}vw`,
+              height: `${starPos[2]}vw`,
+              left: `${starPos[0]}%`,
+              top: `${starPos[1]}%`,
+              opacity: starPos[3],
+              backgroundColor: starPos[4],
+              borderRadius: "50%"
+            }}
+          />
+        );
       })}
     </div>
-  )
+  );
 }
 
 export default Stars;

@@ -1,11 +1,8 @@
 name: Build & Deploy
 
-# TODO: do on new releases instead of pushes to main branch
 on:
-  push:
-    branches: [main]
-  # release:
-  #   types: [created]
+  release:
+    types: [created]
 
 jobs:
   upload-build:

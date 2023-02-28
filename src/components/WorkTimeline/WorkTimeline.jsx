@@ -8,15 +8,16 @@ function WorkTimeline(props) {
         return (
           <div>
             {cloneElement(child)}
-            {index + 1 !== Children.count(props.children)
-              ? <hr style={{ margin: "1.5rem 0" }} />
-              : <></>
-            }
+            {index + 1 !== Children.count(props.children) ? (
+              <hr style={{ margin: "1.5rem 0" }} />
+            ) : (
+              <></>
+            )}
           </div>
-        )
+        );
       })}
     </div>
-  )
+  );
 }
 
 function TimelineCategory(props) {
@@ -30,7 +31,9 @@ function TimelineCategory(props) {
           style={{ display: "block", width: "48px", height: "48px", border: "none" }}
         />
         <div className="timeline-category-item-container">
-          <b className="timeline-no-space timeline-title-text">{props.name}</b>
+          <a href={props.categoryLink} className="timeline-text-blue">
+            <b className="timeline-no-space timeline-title-text">{props.name}</b>
+          </a>
           <p className="timeline-no-space">{props.timeWorked}</p>
         </div>
       </div>
@@ -39,31 +42,32 @@ function TimelineCategory(props) {
         return (
           <div style={{ marginLeft: "1.3rem", marginBottom: "1rem", marginTop: "1rem" }}>
             {/* different category items (different job positions at the company) */}
-            <div
-              style={{ display: "flex" }}
-            >
+            <div style={{ display: "flex" }}>
               {/* div containing left side dots/lines */}
               <div style={{ marginRight: "1rem" }}>
                 <div className="timeline-circle" />
-                {index + 1 !== (props.children || []).length
-                  ? <div className="timeline-vertical-line"></div>
-                  : <></>
-                }
+                {index + 1 !== (props.children || []).length ? (
+                  <div className="timeline-vertical-line"></div>
+                ) : (
+                  <></>
+                )}
               </div>
               {/* TimelineCategoryItem */}
               {cloneElement(child)}
             </div>
           </div>
-        )
+        );
       })}
     </div>
-  )
+  );
 }
 
 function TimelineCategoryItem(props) {
   return (
     <div className="timeline-category-item-container">
-      <b className="timeline-no-space">{props.title}</b>
+      <a href={props.categoryItemLink} className="timeline-text-lightblue">
+        <b className="timeline-no-space">{props.title}</b>
+      </a>
       <p className="timeline-no-space">{props.positionType}</p>
       <p className="timeline-no-space timeline-text-grey">{props.timeWorked}</p>
       <p className="timeline-no-space timeline-text-grey">{props.location}</p>
@@ -71,13 +75,17 @@ function TimelineCategoryItem(props) {
       <p className="timeline-no-space">
         <b style={{ fontSize: "14px" }}>Skills: </b>
         {(props.skills || []).map((skill, index) => {
-          return <span key={index}>{skill}{index + 1 !== props.skills.length ? " · " : <></>}</span>
+          return (
+            <span key={index}>
+              {skill}
+              {index + 1 !== props.skills.length ? " · " : <></>}
+            </span>
+          );
         })}
       </p>
     </div>
-  )
+  );
 }
-
 
 export default WorkTimeline;
 export { TimelineCategory, TimelineCategoryItem };

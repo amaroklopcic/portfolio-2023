@@ -10,7 +10,7 @@ html {
 .landing-header-text-div {
   color: #FCEFF9;
   text-align: left;
-  margin: 100px 50px;
+  margin: 100px 1rem;
 }
 .landing-header-text {
   font-size: 96px;
@@ -26,12 +26,14 @@ html {
 
 .about-section {
   margin: 0 auto;
-  width: 50vw;
+  width: 700px;
   color: #F7FFF7;
 }
 .about-section-flex {
   display: flex;
   flex-direction: row;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .previous-work-section {
@@ -40,7 +42,7 @@ html {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -62,68 +64,43 @@ html {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1400px) {
-  .about-section {
-    width: 40vw;
+
+@media screen and (max-width: 900px) {
+  .landing-header-text {
+    font-size: 72px;
+    margin: 36px 0;
   }
-  .about-section-flex {
-    flex-direction: column-reverse;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .about-section {
-    width: 50vw;
-  }
-  .about-section-flex {
-    flex-direction: column-reverse;
+  .landing-header-text-sm {
+    font-size: 20px;
   }
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 800px) {
   .landing-header-text {
     font-size: 52px;
-    margin: 18px 0;
+    margin: 36px 0;
   }
   .landing-header-text-sm {
     font-size: 16px;
-    margin: 18px 0;
   }
   .about-section {
-    width: 80vw;
+    width: 500px;
   }
   .about-section-flex {
     flex-direction: column-reverse;
   }
 }
-@media screen and (max-width: 480px) {
-  .landing-header-text-div {
-    margin: 300px auto;
-    text-align: center;
-  }
+@media screen and (max-width: 600px) {
   .landing-header-text {
     font-size: 42px;
-    margin: 18px 0;
+    margin: 36px 0;
   }
   .landing-header-text-sm {
     font-size: 16px;
-    margin: 18px 18px;
   }
   .about-section {
-    width: 80vw;
-  }
-  .about-section-flex {
-    flex-direction: column-reverse;
+    width: 100%;
   }
   .previous-work-section {
-    width: 400px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .previous-work-section {
-    width: 350px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .previous-work-section {
-    width: 300px;
+    width: 100%;
   }
 }

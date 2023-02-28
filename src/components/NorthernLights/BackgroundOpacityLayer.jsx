@@ -8,9 +8,9 @@ function DarkLayer() {
 
   useEffect(() => {
     const onScroll = () => setOffset(window.scrollY);
-    window.removeEventListener('scroll', onScroll);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function DarkLayer() {
         transition: "opacity 1s"
       }}
     />
-  )
+  );
 }
 
 export default DarkLayer;
