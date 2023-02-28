@@ -12,9 +12,10 @@ function LandingPage() {
             style={{
               backgroundColor: "transparent",
               borderColor: "transparent",
-              color: "#7EBDC4",
-            }}
-          >Click here</a>
+              color: "#7EBDC4"
+            }}>
+            Click here
+          </a>
           {" to learn more about me :)"}
         </p>
       </div>
