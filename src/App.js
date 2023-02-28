@@ -1,9 +1,9 @@
-import './App.css';
-import LandingPage from './pages/LandingPage';
-import AboutPage from './pages/About/AboutPage';
-import PreviousWorksSection from './pages/PreviousWorks/PreviousWorks';
+import "./App.css";
+import LandingPage from "./pages/LandingPage";
+import AboutPage from "./pages/About/AboutPage";
+import PreviousWorksSection from "./pages/PreviousWorks/PreviousWorks";
 import NorthernLightsBackground from "./components/NorthernLights/NorthernLights";
-import ContactInfo from './pages/Contact/Contact';
+import ContactInfo from "./pages/Contact/Contact";
 
 function App() {
   return (
