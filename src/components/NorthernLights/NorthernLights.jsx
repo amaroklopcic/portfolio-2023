@@ -18,9 +18,8 @@ function NorthernLightsBackground(props) {
           style={{
             width: "100%",
             height: "100%",
-            background: `#213033`,
-          }}
-        >
+            background: `#213033`
+          }}>
           <Stars />
           <MountainsBackground contentWidth={contentWidth} setContentWidth={setContentWidth} />
         </div>
@@ -34,13 +33,12 @@ function NorthernLightsBackground(props) {
             width: contentWidth,
             maxWidth: contentWidth,
             margin: "auto auto"
-          }}
-        >
+          }}>
           {props.children}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default NorthernLightsBackground;

@@ -3,18 +3,12 @@ import "./NorthernLights.css";
 
 function AuroraLights({ numberOfLights = 20 }) {
   const lights = useMemo(() => {
-    const colorVariations = [
-      "#a1d9b4",
-      "#32988a",
-      "#000e3c"
-    ];
+    const colorVariations = ["#a1d9b4", "#32988a", "#000e3c"];
 
     const lights = [];
 
     for (let i = 0; i < numberOfLights; i++) {
-      const randomColor = colorVariations[
-        Math.floor(Math.random() * colorVariations.length)
-      ];
+      const randomColor = colorVariations[Math.floor(Math.random() * colorVariations.length)];
       const x = i * Math.random();
       const y = i * Math.random();
       const duration = 5 + Math.floor(10 * Math.random());
@@ -24,7 +18,7 @@ function AuroraLights({ numberOfLights = 20 }) {
     }
 
     return lights;
-  }, [numberOfLights])
+  }, [numberOfLights]);
 
   return (
     <div className="lights">
@@ -42,7 +36,7 @@ function AuroraLights({ numberOfLights = 20 }) {
               scale: light[5]
             }}
           />
-        )
+        );
       })}
     </div>
   );

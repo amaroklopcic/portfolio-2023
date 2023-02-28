@@ -17,13 +17,14 @@ function MountainsBackground(props) {
   const imageRef = useRef(null);
 
   useEffect(() => {
-    const onResize = () => setDimensions({
-      width: window.innerWidth,
-      height: window.innerHeight
-    });
-    window.removeEventListener('resize', onResize);
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
+    const onResize = () =>
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    window.removeEventListener("resize", onResize);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, []);
 
   useEffect(() => {
@@ -35,7 +36,9 @@ function MountainsBackground(props) {
 
     if (imageBounds) {
       setImageBoundsX(imageBounds.x);
-      const approxContentWidth = `calc(${Math.ceil(imageBounds.width)}px - ${imageFadeWidthVw * 2}vw)`;
+      const approxContentWidth = `calc(${Math.ceil(imageBounds.width)}px - ${
+        imageFadeWidthVw * 2
+      }vw)`;
       if (contentWidth !== approxContentWidth) {
         setContentWidth(approxContentWidth);
       }
@@ -45,7 +48,7 @@ function MountainsBackground(props) {
   const fadeStyle = {
     position: "absolute",
     height: "100%",
-    width: `${imageFadeWidthVw}vw`,
+    width: `${imageFadeWidthVw}vw`
   };
 
   return (
@@ -56,16 +59,15 @@ function MountainsBackground(props) {
         position: "absolute",
         overflow: "hidden",
         bottom: 0,
-        display: "flex",
-      }}
-    >
+        display: "flex"
+      }}>
       <div
         style={{
           ...fadeStyle,
           width: "5000px",
           backgroundColor: "#192426",
           left: imageBoundsX ? imageBoundsX - 5000 : -100000,
-          zIndex: 500,
+          zIndex: 500
         }}
       />
       <div
@@ -73,7 +75,7 @@ function MountainsBackground(props) {
           ...fadeStyle,
           backgroundImage: "linear-gradient(-90deg, transparent 0%, #192426 50%)",
           left: imageBoundsX ? imageBoundsX : -500,
-          zIndex: 500,
+          zIndex: 500
         }}
       />
       <img
@@ -87,7 +89,7 @@ function MountainsBackground(props) {
           maxWidth: "100vw",
           margin: "auto auto",
           marginBottom: 0,
-          objectFit: "fill",
+          objectFit: "fill"
         }}
       />
       <div
@@ -104,11 +106,11 @@ function MountainsBackground(props) {
           width: "5000px",
           backgroundColor: "#192426",
           right: imageBoundsX ? imageBoundsX - 5000 : -100000,
-          zIndex: 500,
+          zIndex: 500
         }}
       />
     </div>
-  )
+  );
 }
 
 export default MountainsBackground;
